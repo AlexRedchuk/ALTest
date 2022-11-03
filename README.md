@@ -6,8 +6,9 @@
 
 ## TIME:
 
-  * List page layout - 7h
+  * List page layout - 3h
   * List page layout adaptation - 2h
+  * Pagination - 4h
   * Detailed View layout - 5h
   * Detailed View layout adapatation - 1h
   * Google map binding - 3h (not included in total time)
