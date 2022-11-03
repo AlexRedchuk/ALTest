@@ -1,0 +1,198 @@
+.jobBar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
+    min-height: max-content;
+    width: 95%;
+}
+
+.jobBar_container {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    padding: 24px 16px;
+    width: 100%;
+}
+
+.jobBar_content {
+    align-content: center;
+    column-gap: 20px;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.jobBar_mainInfo {
+    display: flex;
+    flex: 7;
+}
+
+.jobBar__mainInfo_avatar {
+    background-color: gray;
+    border-radius: 50%;
+    height: 85px;
+    margin-right: 26px;
+    min-width: 85px;
+}
+
+.jobBar__mainInfo_content {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+.jobBar__mainInfo__content_title {
+    color: #3A4562;;
+    font-family: 'Proxima Nova';
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.jobBar__mainInfo__content_title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.jobBar__mainInfo__content_department {
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+}
+
+.jobBar__mainInfo__content_location {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+}
+
+.jobBar__mainInfo__content__location_text {
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+}
+
+.jobBar__mainInfo__content__location_icon {
+    height: 18px;
+    width: 13px;
+}
+
+.jobBar_sideInfo {
+    display: flex;
+    flex: 3;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.jobBar__sideInfo_datePosted {
+    align-items: flex-end;
+    flex: 2;
+    flex-direction: column;
+    display: flex;
+    min-height: 100%;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.jobBar__sideInfo_icon {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.jobBar__sideInfo_icon path {
+    stroke: #70778B;
+    fill: none;
+}
+
+.jobBar__sideInfo_text {
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    text-align: right;
+}
+
+.jobBar_stars {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.jobBar_stars svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .jobBar__mainInfo__content_title {
+        font-size: 18px;
+    }
+
+    .jobBar__sideInfo_text, .jobBar__mainInfo__content_department, .jobBar__mainInfo__content__location_text {
+        font-size: 14px;
+    }
+
+    .jobBar__mainInfo_avatar {
+        height: 75px;
+        min-width: 75px;
+    }
+
+    .jobBar_stars svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .jobBar {
+        background-color: #EFF0F5;
+    }
+
+    .jobBar_content {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .jobBar_mainInfo {
+        order: 2;
+    }
+
+    .jobBar__mainInfo__content_title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .jobBar_sideInfo {
+        order: 1;
+        align-items: center;
+    }
+
+    .jobBar__sideInfo_icon {
+        display: none;
+    }
+
+    .jobBar_stars {
+        align-items: flex-start;
+    }
+
+    .jobBar_stars svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .jobBar__mainInfo_avatar {
+        height: 65px;
+        min-width: 65px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .jobBar__sideInfo_text {
+            font-size: 12px;
+        }
+}

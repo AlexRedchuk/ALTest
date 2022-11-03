@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import DetailedPage from './pages/detailedPage/DetailedPage';
+import ListPage from './pages/listPage/ListPage';
+import {  Route, Routes } from "react-router-dom";
+import { getJobs } from "./actions/jobActions";
+import { connect } from 'react-redux';
 
-function App() {
+const App = ({getJobs}) => {
+  useEffect(() => {
+    async function makeFetch() {
+      await getJobs();
+    }
+    makeFetch();
+  }, [getJobs]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" exact element={<ListPage />} />
+        <Route path="/detailedView/:id" exact element={<DetailedPage />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+export default connect(null, {getJobs})(App);

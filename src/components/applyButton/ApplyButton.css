@@ -1,0 +1,15 @@
+.applyButton {
+    all: unset;
+    align-items: center;
+    background-color: #384564;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Proxima Nova';
+    font-weight: 500;
+    justify-content: center;
+    padding: 18px 30px;
+    text-transform: uppercase;
+    
+}

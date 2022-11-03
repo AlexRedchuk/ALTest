@@ -1,0 +1,136 @@
+.pagination {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    height: 52px;
+    width: 515px;
+}
+
+.pagination_container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.pagination_navButton {
+    all: unset;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+}
+
+.pagination_navButton:hover g {
+    fill: #5876C5;
+    opacity: 1;
+}
+
+.pagination_navButton:hover g rect{
+    fill: #5876C5;
+}
+
+.pagination_navButton.left {
+    border-right: 1px solid #DEE3EF;
+    padding-left: 24px;
+    padding-right: 30px;
+}
+
+
+.pagination_navButton.right {
+    border-left: 1px solid #DEE3EF;
+    padding-left: 30px;
+    padding-right: 24px;
+}
+
+.pagination_pages {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination__pages_container {
+    display: flex;
+    height: 100%;
+}
+
+.pagination_pages_button {
+    all: unset;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-top: 3px;
+    user-select: none;
+    width: 32px;
+}
+
+.pagination_pages_dots {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    user-select: none;
+    width: 32px;
+}
+
+.pagination_pages__button_text {
+    color: #70778B;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+}
+
+.pagination_pages_button:hover .pagination_pages__button_text {
+    color: #5876C5;
+}
+
+.pagination_pages_button.active {
+    border-bottom: 3px solid #5876C5;
+}
+
+.pagination_pages_button.active .pagination_pages__button_text {
+    color: #5876C5;
+}
+
+@media screen and (max-width: 425px) {
+    .pagination_navButton.left {
+        padding-left: 16px;
+        padding-right: 12px;
+    }
+
+    .pagination_navButton.right {
+        padding-left: 12px;
+        padding-right: 16px;
+    }
+
+
+}
+
+@media screen and (max-width: 375px) {
+    .pagination_pages_button, .pagination_pages_dots {
+        width: 20px;
+    }
+
+
+    .pagination_pages__button_text {
+        font-size: 15px;
+    }
+
+    .pagination_navButton.left {
+        padding-left: 12px;
+        padding-right: 8px;
+    }
+
+    .pagination_navButton.right {
+        padding-left: 8px;
+        padding-right: 12px;
+    }
+}

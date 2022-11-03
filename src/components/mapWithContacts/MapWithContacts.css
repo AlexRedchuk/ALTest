@@ -1,0 +1,77 @@
+.mapWithContacts {
+    position: relative;
+}
+
+.mapWithContacts_contacts {
+    background-color: #2A3047;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    width: 402px;
+}
+
+.mapWithContacts__contacts__background_circle {
+    background-color: #202336;
+    border-radius: 50%;
+    height: 270px;
+    left: -15%;
+    top: -10%;
+    position: absolute;
+    width: 270px;
+}
+
+.mapWithContacts__contacts_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.mapWithContacts__contacts__content_title {
+    color: #E7EAF0;
+    font-family: 'Proxima Nova';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+
+.mapWithContacts__contacts__content_text {
+    color: #E8EBF3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.mapWithContacts__contacts__content__location_icon {
+    margin-right: 6px;
+}
+
+.mapWithContacts__contacts__content__location_icon path {
+    fill: rgba(255, 255, 255, 0.669635);
+}
+
+.mapWithContacts_map {
+    position: absolute;
+    top: 0;
+}
+
+.mapWithContacts__map_locationIcon {
+    bottom: 30%;
+    left: 20%;
+    height: 28px;
+    position: absolute;
+    width: 36px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 375px) {
+    .mapWithContacts_map_image, .mapWithContacts_contacts {
+        width: 360px;
+    }
+}

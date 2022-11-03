@@ -1,0 +1,310 @@
+
+.detailedPage {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.detailedPage_container {
+    column-gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 30px 0 180px 0;
+}
+
+.detailedPage_content {
+    width: 60%;
+}
+
+.detailedPage_header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    position: relative;
+    width: 100%;
+}
+
+.detailedPage__header_titleContainer {
+    height: min-content;
+    width: 100%;
+}
+
+.detailedPage_headerTitle {
+    color: #3A4562;
+    font-family: 'Proxima Nova';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.detailedPage_headerTitle::after {
+    background-color: #3A4562;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    opacity: 0.13;
+    position: absolute;
+    width: 100%;
+}
+
+.detailedPage__header_actionBtns {
+    display: flex;
+    column-gap: 30px;
+}
+
+.detailedPage__header_actionBtn {
+    all: unset;
+    align-items: center;
+    column-gap: 15px;
+    cursor: pointer;
+    display: flex;
+}
+
+.detailedPage__header__actionBtn_text {
+    color: #3A4562;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.detailedPage_applyBtn {
+    margin-top: 40px;
+}
+
+.detailedPage_topInfo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    margin-top: 30px;
+    row-gap: 10px;
+}
+
+.detailedPage__topInfo_title {
+    color: #3A4562;
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.detailedPage__topInfo_posted {
+    color: #38415D5B;
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+}
+
+.datailedPage_regularTitle {
+    color: #3A4562;
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.detailedPage__topInfo_price {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+}
+
+.detailedPage__topInfo__price_text {
+    color: #3A4562;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.detailedPage_textContent {
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    margin-top: 10px;
+    row-gap: 50px;
+}
+
+.datailedPage_regularText {
+    color: #3A4562;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.detailedPage__textContent_textBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.detailedPage__textContent__textBlock_responsibilities {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.detailedPage__benefitsList_item {
+    list-style-type: none;
+}
+
+.detailedPage__benefitsList_item::before {
+    all: unset;
+    content: '■';
+    position: relative;
+    bottom: 2px;
+    right: 5px;
+    color: #384564A1;
+}
+
+.detailedPage_titleContainer {
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.detailedPage__additionalInfo_content {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    row-gap: 10px;
+}
+
+.detailedPage__textContent_btnContainer {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.detailedPage__additionalInfo__content_tagBoxes {
+    column-gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 8px;
+    width: 100%;
+}
+
+.detailedPage_tagBox {
+    border-radius: 8px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.detailedPage_tagBox.blue {
+    background-color: rgba(161, 177, 219, 0.317343);
+    border: 1px solid rgba(85, 105, 158, 0.3);
+    color: #55699E;
+}
+
+.detailedPage_tagBox.yellow {
+    background-color: rgba(255, 207, 0, 0.15);;
+    border: 1px solid #FFCF00;
+    color: #988B49;
+}
+
+.detailedPage__additionalInfo_images {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 8px;
+}
+
+.detailedPage__additionalInfo_image {
+    border-radius: 8px;
+    max-height: 180px;
+    width: 100%;
+}
+
+.detailedPage__backButton {
+    align-items: center;
+    background-color: rgba(56, 69, 100, 0.13);
+    border-radius: 8px;
+    bottom: 100px;
+    column-gap: 10px;
+    display: flex;
+    height: 50px;
+    padding: 24px 16px;
+    position: relative;
+    left: 5%;
+    text-decoration: none;
+    width: 215px;
+    z-index: 2;
+}
+
+.detailedPage__backButton_text{
+    color: #3A4562;
+    font-weight: 'Proxima Nova';
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.detailedPage__mapTitleContainer {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .detailedPage_container {
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .detailedPage_content {
+        width: 95%;
+    }
+
+    .detailedPage_header {
+        grid-template-columns: unset;
+        row-gap: 30px;
+    }
+
+    .detailedPage_topInfo {
+        align-items: center;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .detailedPage__topInfo_price {
+        flex-direction: column-reverse;
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .detailedPage__topInfo_posted {
+        grid-column-start: 1;
+            grid-row-start: 2;
+    }
+
+    .detailedPage__header_titleContainer {
+        position: relative;
+    }
+
+    .detailedPage__textContent_btnContainer {
+        justify-content: center;
+    }
+
+    .detailedPage_map {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 220px 0;
+        row-gap: 30px;
+        width: 95%;
+    }
+
+    .detailedPage__mapTitle_container {
+        display: block;
+        margin-top: 70px;
+        position: relative;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .detailedPage_map {
+        padding: 30px 0 150px 0;
+    }
+}
