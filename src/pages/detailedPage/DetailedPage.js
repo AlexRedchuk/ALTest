@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { connect } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import ApplyButton from "../../components/applyButton/ApplyButton";
 import MapWithContacts from "../../components/mapWithContacts/MapWithContacts";
 import { ReactComponent as Bookmark } from "../../svg/Bookmark Empty.svg";
@@ -13,6 +13,9 @@ import "./DetailedPage.css";
 const DetailedPage = ({ jobs }) => {
   const params = useParams();
   const [job, setJob] = useState({});
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const pageParam = useMemo(() => !!searchParams.get('page') ? `?page=${searchParams.get('page')}` : '', [searchParams]);
 
   const calculateDays = useCallback(
     (data) => {
@@ -37,7 +40,6 @@ const DetailedPage = ({ jobs }) => {
     return <div>Loading...</div>;
   }
 
-  console.log(job);
   return (
     <div className="detailedPage">
       <div className="detailedPage_container">
@@ -98,9 +100,9 @@ const DetailedPage = ({ jobs }) => {
                 Compensation & Benefits:
               </span>
               <ul className="detailedPage_benefitsList">
-                {job.benefits.map((el) => {
+                {job.benefits.map((el, i) => {
                   return (
-                    <li className="detailedPage__benefitsList_item">
+                    <li key={i} className="detailedPage__benefitsList_item">
                       <span className="datailedPage_regularText">{el}</span>
                     </li>
                   );
@@ -118,16 +120,16 @@ const DetailedPage = ({ jobs }) => {
             <div className="detailedPage__additionalInfo_content">
               <span className="datailedPage_regularText">Employment type</span>
               <div className="detailedPage__additionalInfo__content_tagBoxes">
-                {job.employment_type.map((el) => (
-                  <div className="detailedPage_tagBox blue">{el}</div>
+                {job.employment_type.map((el, i) => (
+                  <div key={i} className="detailedPage_tagBox blue">{el}</div>
                 ))}
               </div>
             </div>
             <div className="detailedPage__additionalInfo_content">
               <span className="datailedPage_regularText">Benefits</span>
               <div className="detailedPage__additionalInfo__content_tagBoxes">
-                {job.benefits.map((el) => (
-                  <div className="detailedPage_tagBox yellow">{el}</div>
+                {job.benefits.map((el, i) => (
+                  <div key={i} className="detailedPage_tagBox yellow">{el}</div>
                 ))}
               </div>
             </div>
@@ -158,7 +160,7 @@ const DetailedPage = ({ jobs }) => {
           <MapWithContacts job={job} />
         </div>
       </div>
-      <Link to="/" className="detailedPage__backButton">
+      <Link to={`/${pageParam}`} className="detailedPage__backButton">
         <Arrow />
         <span className="detailedPage__backButton_text">
           Return to job board

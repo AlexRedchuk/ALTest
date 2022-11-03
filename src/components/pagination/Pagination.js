@@ -62,7 +62,7 @@ const Pagination = ({ currentPage, setCurrentPage, maxSize }) => {
     <div className="pagination">
       <div className="pagination_container">
         <button
-          onClick={() => setCurrentPage((prev) => (prev > 1 ? prev - 1 : 1))}
+          onClick={() => setCurrentPage(currentPage > 1 ? currentPage - 1 : 1)}
           className="pagination_navButton left"
         >
           <ArrowLeft />
@@ -110,7 +110,7 @@ const Pagination = ({ currentPage, setCurrentPage, maxSize }) => {
         </div>
         <button
           onClick={() =>
-            setCurrentPage((prev) => (prev < maxSize ? prev + 1 : prev))
+            setCurrentPage(currentPage < maxSize ? currentPage + 1 : currentPage)
           }
           className="pagination_navButton right"
         >

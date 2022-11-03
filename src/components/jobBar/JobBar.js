@@ -5,7 +5,7 @@ import { ReactComponent as Star } from "../../svg/Star.svg";
 import "./JobBar.css";
 import { Link } from "react-router-dom";
 
-const JobBar = ({ job }) => {
+const JobBar = ({ job, currentPage }) => {
 
   const { title, address, name, pictures, createdAt } = job;
 
@@ -25,7 +25,7 @@ const JobBar = ({ job }) => {
         <div className="jobBar_content">
           <div className="jobBar_mainInfo">
             <div className="jobBar__mainInfo_content">
-              <Link to={`/detailedView/${job.id}`} className="jobBar__mainInfo__content_title">{title}</Link>
+              <Link to={`/detailedView/${job.id}?page=${currentPage}`} className="jobBar__mainInfo__content_title">{title}</Link>
               <span className="jobBar__mainInfo__content_department">
                 Department name • {name}
               </span>
